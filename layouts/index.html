@@ -1,0 +1,14 @@
+{{ define "main" }}
+    <main class="container">
+        <section> <!-- welcome section -->
+            <h1>Zombo!</h1>
+        </section>
+        <section> <!-- articles -->
+        {{ range first 3 (where .Data.Pages "Params.featured" "true") }}
+            {{ .Render "content-list" }}
+        {{ end }}
+        </section>
+        <section> <!-- subscribe/newsletter form? -->
+        </section>
+    </main>
+{{ end }}
