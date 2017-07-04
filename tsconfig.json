@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "outFile": "app.js"
+    },
+    "files": [
+        "src/ts/util.ts",
+        "src/ts/nav.ts",
+        "src/ts/init.ts"
+    ]
+}

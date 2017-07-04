@@ -1,19 +1,12 @@
 namespace Nav {
-    export function toggleMenu() {
-        let toggle = document.querySelector('.nav-toggle')
-        let menu = document.querySelector('.nav-menu')
-
-        if (toggle.classList.contains('is-active'))
-        {
-            toggle.classList.remove('is-active')
-            menu.classList.remove('is-active')
-        }
-        else
-        {
-            toggle.classList.add('is-active')
-            menu.classList.add('is-active')
-        }
+    export function attachNavbarScrollWatcher(threshold = 100) {
+        let navBar = document.querySelector('header')
+        document.addEventListener('scroll', (event) => {   
+            let top = window.pageYOffset || document.documentElement.scrollTop
+            
+            if ((top > threshold && navBar.classList.contains(Util.Classes.hidden)) || (top < threshold && !navBar.classList.contains(Util.Classes.hidden))) {
+                navBar.classList.toggle(Util.Classes.hidden)
+            }
+        })
     }
 }
-
-document.querySelector('.nav-toggle').addEventListener('click', Nav.toggleMenu)

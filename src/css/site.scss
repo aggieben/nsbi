@@ -1,1 +1,47 @@
-@import "../../node_modules/bulma/bulma"
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
+
+// customizations via bulma variables here here
+
+@import "../../node_modules/bulma/bulma";
+
+// further customizations here
+
+// VARIABLES
+$content-width-desktop: 1024px;
+
+.container {
+    @include tablet {
+        max-width: $content-width-desktop;
+    }
+}
+
+.main-cover-img img {
+    min-height: 100vh;
+    background-color: red;
+}
+
+.main-cover-p {
+    align-items: center;
+}
+
+header {
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index: 1;
+    transition: 0.33s;
+
+    &.hidden {
+        visibility: hidden;
+        opacity: 0;
+
+        transition: 0.33s;
+    }
+    
+    .nav {
+        +desktop {
+            max-width: $content-width-desktop;
+        }
+    }
+}

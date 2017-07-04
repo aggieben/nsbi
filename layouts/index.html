@@ -1,14 +1,14 @@
 {{ define "main" }}
-    <main class="container">
-        <section> <!-- welcome section -->
-            <h1>Zombo!</h1>
-        </section>
-        <section> <!-- articles -->
-        {{ range first 3 (where .Data.Pages "Params.featured" "true") }}
-            {{ .Render "content-list" }}
-        {{ end }}
-        </section>
-        <section> <!-- subscribe/newsletter form? -->
-        </section>
+    <main>
+        <div class="columns">
+            <div class="column has-text-centered main-cover-p">
+                {{ .Content }}
+            </div>
+            <div class="column main-cover-img">
+                <figure class="image">
+                    <img src="http://lorempixel.com/200/600/" />
+                </figure>
+            </div>
+        </div>
     </main>
 {{ end }}
