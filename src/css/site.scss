@@ -1,13 +1,34 @@
 @import "../../node_modules/bulma/sass/utilities/initial-variables.sass";
 
 // customizations via bulma variables here here
+$family-sans-serif: 'Raleway', sans-serif;
+$family-primary: $family-sans-serif;
+$primary: $black-ter;
 
 @import "../../node_modules/bulma/bulma";
 
 // further customizations here
+@import url('https://fonts.googleapis.com/css?family=Cinzel|Raleway');
 
 // VARIABLES
 $content-width-desktop: 1024px;
+$font-header: 'Cinzel', serif;
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: $font-header;
+}
+
+h1 {
+    font-size: $size-1;
+}
+
+h2 {
+    font-size: $size-2;
+}
+
+h3 { 
+    font-size: $size-3;
+}
 
 .container {
     @include tablet {
@@ -15,33 +36,59 @@ $content-width-desktop: 1024px;
     }
 }
 
-.main-cover-img img {
-    min-height: 100vh;
-    background-color: red;
+.cover { 
+    height: 102vh;
+}
+
+.main-cover-img {
+    @include tablet {
+        background-image: url(../img/marzocco_500.jpg);
+        background-size: cover;
+        background-clip: content-box;
+    }
+
+    @include mobile {
+        height: 50vh;
+        background-image: url(../img/marzocco_312.jpg);
+        background-size: cover;
+        background-clip: content-box;
+    }
 }
 
 .main-cover-p {
+    display: flex;
     align-items: center;
+    margin: 5% default;
+
+    @include mobile {
+        height: 50vh;
+    }
+
+    .content-wrap {
+        display: block;
+        text-align: right;
+    }
 }
 
-header {
+.site-header {
     border-bottom: 1px solid #eee;
-    position: fixed;
     width: 100%;
-    top: 0px;
-    z-index: 1;
-    transition: 0.33s;
 
-    &.hidden {
-        visibility: hidden;
-        opacity: 0;
+    @include tablet {
+        position: fixed;
+        top: 0px;
+        z-index: 1;
+        transition: 0.2s ease-in-out;
 
-        transition: 0.33s;
-    }
-    
-    .nav {
-        +desktop {
-            max-width: $content-width-desktop;
+        &.hidden {
+            visibility: hidden;
+            opacity: 0;
+
+            transition: 0.2s ease-in-out;
         }
+    }
+
+    @include mobile {
+
     }
 }
