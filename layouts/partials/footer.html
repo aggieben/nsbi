@@ -1,5 +1,33 @@
 <footer class="footer">
     <div class="container">
-        <p>handcrafted by ben collins, inspired by nosidebar.com</p>
+        <h3>benjamincollins.com</h3>
+        <p>by ben collins, inspired by <a href="//nosidebar.com">nosidebar.com</a></p>
+        <p>            
+            {{ if isset .Site.Params "twitter" }}
+                <a href={{ printf "https://twitter.com/%s" .Site.Params.twitter }}>
+                    {{ .Site.Params.twitter }} <span class="icon is-small"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                </a>
+            {{ end }}
+            {{ if isset .Site.Params "facebook" }}
+                <a href={{ printf "https://facebook.com/%s" .Site.Params.facebook }}>
+                    {{ .Site.Params.facebook }} <span class="icon is-small"><i class="fa fa-facebook" aria-hidden="true"></i></span>
+                </a>
+            {{ end }}
+            {{ if isset .Site.Params "github" }}
+                <a href={{ printf "https://github.com/%s" .Site.Params.github }}>
+                    {{ .Site.Params.github }} <span class="icon is-small"><i class="fa fa-github" aria-hidden="true"></i></span>
+                </a>
+            {{ end }}
+            {{ if isset .Site.Params "keybase" }}
+                <a href={{ printf "https://keybase.io/%s" .Site.Params.keybase }}>
+                    {{ .Site.Params.keybase }} <span class="icon is-small"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                </a>
+            {{ end }}
+            {{ if isset .Site.Params "stackoverflowstory" }}
+                <a href={{ printf "https://stackoverflow.com/story/%s" .Site.Params.stackoverflowstory }}>
+                    {{ .Site.Params.stackoverflowstory }} <span class="icon is-small"><i class="fa fa-stack-overflow"></i></span>
+                </a>
+            {{ end }}
+        </p>
     </div>
 </footer>

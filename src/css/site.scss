@@ -4,6 +4,7 @@
 $family-sans-serif: 'Raleway', sans-serif;
 $family-primary: $family-sans-serif;
 $primary: $black-ter;
+$background: $white;
 
 @import "../../node_modules/bulma/bulma";
 
@@ -124,6 +125,18 @@ h3 {
 
         a.button {
             margin-top: 25px;
+        }
+    }
+}
+
+.footer {
+    border-top: 1px solid #eee;
+
+    .container {
+        text-align: center;
+
+        a:not(:first-child):before {
+            content: '\2014';
         }
     }
 }
