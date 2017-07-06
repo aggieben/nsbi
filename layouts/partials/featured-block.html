@@ -1,0 +1,10 @@
+<article>
+    <header>
+        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Params.featuretitle | default .Title }}</a></h1>
+        <div class="post-meta"><time datetime="{{ .Date.Format "02 January 2006" }}">{{ .Date.Format "02 January 2006" }}</time></div>
+    </header>
+    <summary>
+        <p>{{ .Params.description | default (.Summary | markdownify | truncate 250 "..." ) }}</p>
+    </summary>
+    <a href="{{ .Permalink }}" class="button is-primary is-outlined">Read more...</a>
+</article>

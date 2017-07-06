@@ -4317,16 +4317,14 @@ h3 {
 
 @media screen and (min-width: 769px), print {
   .container {
-    max-width: 1024px; } }
+    max-width: 960px; } }
+
+@media screen and (min-width: 1192px) {
+  .container {
+    max-width: 1080px; } }
 
 .cover {
   height: 102vh; }
-
-@media screen and (min-width: 769px), print {
-  .main-cover-img {
-    background-image: url(../img/marzocco_500.jpg);
-    background-size: cover;
-    background-clip: content-box; } }
 
 @media screen and (max-width: 768px) {
   .main-cover-img {
@@ -4335,14 +4333,25 @@ h3 {
     background-size: cover;
     background-clip: content-box; } }
 
+@media screen and (min-width: 769px), print {
+  .main-cover-img {
+    width: 480px;
+    background-image: url(../img/marzocco_500.jpg);
+    background-size: cover;
+    background-clip: content-box; } }
+
+@media screen and (min-width: 1192px) {
+  .main-cover-img {
+    width: 540px; } }
+
 .main-cover-p {
   display: flex;
-  align-items: center;
-  margin: 5% default; }
+  align-items: center; }
   @media screen and (max-width: 768px) {
     .main-cover-p {
       height: 50vh; } }
   .main-cover-p .content-wrap {
+    margin: auto 10%;
     display: block;
     text-align: right; }
 
@@ -4359,3 +4368,18 @@ h3 {
         visibility: hidden;
         opacity: 0;
         transition: 0.2s ease-in-out; } }
+
+.featured {
+  margin-top: 75px; }
+  .featured .summary {
+    display: flex;
+    align-items: center;
+    padding: 15%; }
+    .featured .summary.left {
+      text-align: right; }
+    .featured .summary.right {
+      text-align: left; }
+    .featured .summary summary p {
+      margin-top: 25px; }
+    .featured .summary a.button {
+      margin-top: 25px; }

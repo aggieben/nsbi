@@ -3,46 +3,28 @@
         <div class="cover columns is-paddingless">
             <div class="column has-text-centered main-cover-p">
                 <div class="content-wrap">
-                    {{ .Content }}
+                    <h1>{{ .Title }}</h1>
+                    <p>{{ .Content }}</p>
                 </div>
             </div>
             <div class="column main-cover-img is-paddingless">
-                <!--<picture>
-                    <source media="(max-width: 768px)" srcset="img/marzocco_312.jpg" />
-                    <source media="(min-width: 769px)" srcset="img/marzocco_500.jpg" />
-                    <img src="img/marzocco_500.jpg" />
-                </picture>-->
             </div>
         </div>
         {{ range $index, $element := where .Data.Pages ".Params.featured" true }}
             <div class="featured columns">
                 {{ if eq 0 (mod $index 2) }}
                 <div class="column">
-                    <article>
-                        <header>
-                            <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                            <div class="post-meta"><time datetime="{{ .Date.Format "02 January 2006" }}">{{ .Date.Format "02 January 2006" }}</time></div>
-                        </header>
-                        <summary>
-                            {{ printf "index: %d" $index }}
-                        </summary>
-                    </article>
+                    <img src="https://nosidebar.com/images/site/chasing-slow@2x.jpg" />
                 </div>
-                <div class="column">
+                <div class="column is-two-thirds summary right">
+                    {{ partial "featured-block.html" . }}
                 </div>
                 {{ else }}
-                <div class="column">
+                <div class="column is-two-thirds summary left">
+                    {{ partial "featured-block.html" . }}
                 </div>
                 <div class="column">
-                    <article>
-                        <header>
-                            <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
-                            <div class="post-meta"><time datetime="{{ .Date.Format "02 January 2006" }}">{{ .Date.Format "02 January 2006" }}</time></div>
-                        </header>
-                        <summary>
-                            {{ printf "index: %d" $index }}
-                        </summary>
-                    </article>
+                    <img src="https://nosidebar.com/images/site/chasing-slow@2x.jpg" />
                 </div>
                 {{ end }}
             </div>

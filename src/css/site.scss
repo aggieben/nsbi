@@ -11,7 +11,8 @@ $primary: $black-ter;
 @import url('https://fonts.googleapis.com/css?family=Cinzel|Raleway');
 
 // VARIABLES
-$content-width-desktop: 1024px;
+$content-width-tablet: 960px;
+$content-width-widescreen: 1080px;
 $font-header: 'Cinzel', serif;
 
 h1,h2,h3,h4,h5,h6 {
@@ -32,7 +33,10 @@ h3 {
 
 .container {
     @include tablet {
-        max-width: $content-width-desktop;
+        max-width: $content-width-tablet;
+    }
+    @include widescreen {
+        max-width: $content-width-widescreen;
     }
 }
 
@@ -41,30 +45,35 @@ h3 {
 }
 
 .main-cover-img {
-    @include tablet {
-        background-image: url(../img/marzocco_500.jpg);
-        background-size: cover;
-        background-clip: content-box;
-    }
-
     @include mobile {
         height: 50vh;
         background-image: url(../img/marzocco_312.jpg);
         background-size: cover;
         background-clip: content-box;
     }
+
+    @include tablet {
+        width: $content-width-tablet / 2;
+        background-image: url(../img/marzocco_500.jpg);
+        background-size: cover;
+        background-clip: content-box;
+    }
+
+    @include widescreen {
+        width: $content-width-widescreen / 2;
+    }
 }
 
 .main-cover-p {
     display: flex;
     align-items: center;
-    margin: 5% default;
 
     @include mobile {
         height: 50vh;
     }
 
     .content-wrap {
+        margin: auto 10%;
         display: block;
         text-align: right;
     }
@@ -90,5 +99,31 @@ h3 {
 
     @include mobile {
 
+    }
+}
+
+.featured {
+    margin-top: 75px;
+
+    .summary {
+        display: flex;
+        align-items: center;
+        padding: 15%;
+
+        &.left {
+            text-align: right;
+        }
+
+        &.right {
+            text-align: left;
+        }
+
+        summary p {
+            margin-top: 25px;
+        }
+
+        a.button {
+            margin-top: 25px;
+        }
     }
 }
