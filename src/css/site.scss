@@ -169,6 +169,18 @@ main.single {
         img.avatar {
             border-radius: 50%;
         }
+
+        .separator {
+            font-size: $size-3;
+        }
+    }
+
+    .content-wrap {
+        padding: 50px 50px;
+    }
+
+    h2, h3, h4, h5, h6 {
+        margin-top: 20px;
     }
 }
 

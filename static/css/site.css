@@ -4412,6 +4412,12 @@ main.single {
       align-items: center; }
     main.single header img.avatar {
       border-radius: 50%; }
+    main.single header .separator {
+      font-size: 2rem; }
+  main.single .content-wrap {
+    padding: 50px 50px; }
+  main.single h2, main.single h3, main.single h4, main.single h5, main.single h6 {
+    margin-top: 20px; }
 
 .featured {
   margin-top: 75px; }
