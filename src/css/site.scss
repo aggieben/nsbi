@@ -99,6 +99,30 @@ h3 {
     border-bottom: 1px solid #eee;
     width: 100%;
 
+    .nav {
+        height: 5rem;
+    }
+
+    .nav-item {
+        font-variant: small-caps;
+        margin: 0px 20px;
+    }
+
+    .nav-item.logo {
+        font-family: $font-header;
+        font-size: $size-2;
+
+        span:first-child {
+            margin-right: -6px;
+            margin-bottom: 10px;
+        }
+
+        span:last-child {
+            margin-left: -6px;
+            margin-top: 5px;
+        }
+    }
+
     @include tablet {
         position: fixed;
         top: 0px;
@@ -115,6 +139,36 @@ h3 {
 
     @include mobile {
 
+    }
+}
+
+main.single {
+    margin-top: 100px;
+    
+    @include tablet {
+        width: $content-width-tablet;
+    }
+
+    @include widescreen {
+        width: $content-width-widescreen;
+    }
+
+    header {
+        text-align: center;
+
+        .column:first-child {
+            text-align: right;
+        }
+
+        .column:last-child {
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        img.avatar {
+            border-radius: 50%;
+        }
     }
 }
 

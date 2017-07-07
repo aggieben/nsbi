@@ -4369,6 +4369,20 @@ h3 {
 .site-header {
   border-bottom: 1px solid #eee;
   width: 100%; }
+  .site-header .nav {
+    height: 5rem; }
+  .site-header .nav-item {
+    font-variant: small-caps;
+    margin: 0px 20px; }
+  .site-header .nav-item.logo {
+    font-family: "Cinzel", serif;
+    font-size: 2.5rem; }
+    .site-header .nav-item.logo span:first-child {
+      margin-right: -6px;
+      margin-bottom: 10px; }
+    .site-header .nav-item.logo span:last-child {
+      margin-left: -6px;
+      margin-top: 5px; }
   @media screen and (min-width: 769px), print {
     .site-header {
       position: fixed;
@@ -4379,6 +4393,25 @@ h3 {
         visibility: hidden;
         opacity: 0;
         transition: 0.2s ease-in-out; } }
+
+main.single {
+  margin-top: 100px; }
+  @media screen and (min-width: 769px), print {
+    main.single {
+      width: 960px; } }
+  @media screen and (min-width: 1192px) {
+    main.single {
+      width: 1080px; } }
+  main.single header {
+    text-align: center; }
+    main.single header .column:first-child {
+      text-align: right; }
+    main.single header .column:last-child {
+      text-align: left;
+      display: flex;
+      align-items: center; }
+    main.single header img.avatar {
+      border-radius: 50%; }
 
 .featured {
   margin-top: 75px; }

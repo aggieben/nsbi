@@ -1,0 +1,21 @@
+{{ define "header" }}
+    {{ partial "header-visible" . }}
+{{ end }}
+
+{{ define "main" }}
+    <main class="single">
+        <article>
+            <header>
+                <h1>{{ .Title }}</h1>
+                <div class="columns">
+                    <div class="column">
+                        <img class="avatar" src="https://www.gravatar.com/avatar/d6ffb64dae7174fb723e9db15e1fcddb"/>
+                    </div>
+                    <div class="column">
+                        <span>Ben Collins</span>
+                    </div>
+                </div>
+            </header>
+        </article>
+    </main>
+{{ end }}

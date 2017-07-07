@@ -9,7 +9,8 @@
         <title>{{ default .Site.Title .Title }}</title> 
     </head>
     <body class="section is-paddingless">
-        {{ partial "header" . }}
+        {{ block "header" . }}
+        {{ end }}
         <div class="container">
             {{ block "main" . }}
             {{ end }}
