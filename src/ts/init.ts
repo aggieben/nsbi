@@ -1,7 +1,4 @@
-import * as _ from 'lodash'
-import * as verge from 'verge'
 import * as Nav from './nav'
-import * as Util from './util'
 
 export namespace Init {
     export function index() {

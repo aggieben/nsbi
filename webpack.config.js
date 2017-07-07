@@ -7,9 +7,6 @@ module.exports = {
         libraryTarget: 'var',
         library: 'bitthicket'
     },
-    externals: {
-        lodash: '_'
-    },
 
     devtool: "source-map",
 
