@@ -4344,6 +4344,14 @@ h3 {
   .main-cover-img {
     width: 540px; } }
 
+@keyframes contentEaseIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+
 .main-cover-p {
   display: flex;
   align-items: center; }
@@ -4354,6 +4362,9 @@ h3 {
     margin: auto 10%;
     display: block;
     text-align: right; }
+    @media screen and (min-width: 769px), print {
+      .main-cover-p .content-wrap {
+        animation: 1s ease-in-out 0.5s 1 both contentEaseIn; } }
 
 .site-header {
   border-bottom: 1px solid #eee;
@@ -4371,6 +4382,12 @@ h3 {
 
 .featured {
   margin-top: 75px; }
+  @media screen and (min-width: 769px), print {
+    .featured article {
+      animation: 1s ease-in-out 0.5s 1 both contentEaseIn; }
+      .featured article.hidden {
+        opacity: 0;
+        visibility: hidden; } }
   .featured .summary {
     display: flex;
     align-items: center;

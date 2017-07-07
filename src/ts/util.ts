@@ -1,5 +1,3 @@
-namespace Util {
-    export enum Classes {
-        hidden = 'hidden'
-    }
+export enum Classes {
+    hidden = 'hidden'
 }
