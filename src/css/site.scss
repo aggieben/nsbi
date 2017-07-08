@@ -169,9 +169,26 @@ main.single {
         img.avatar {
             border-radius: 50%;
         }
+    }
 
-        .separator {
-            font-size: $size-3;
+    .separator {
+        font-size: $size-3;
+        margin-top: 5%;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include tablet {
+            width: $content-width-tablet / 2;
+        }
+
+        @include widescreen {
+            width: $content-width-widescreen / 2;
+        }
+
+        img {
+            height: 30px;
+            display: block;
+            margin: 5% auto;
         }
     }
 

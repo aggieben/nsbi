@@ -4412,8 +4412,21 @@ main.single {
       align-items: center; }
     main.single header img.avatar {
       border-radius: 50%; }
-    main.single header .separator {
-      font-size: 2rem; }
+  main.single .separator {
+    font-size: 2rem;
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto; }
+    @media screen and (min-width: 769px), print {
+      main.single .separator {
+        width: 480px; } }
+    @media screen and (min-width: 1192px) {
+      main.single .separator {
+        width: 540px; } }
+    main.single .separator img {
+      height: 30px;
+      display: block;
+      margin: 5% auto; }
   main.single .content-wrap {
     padding: 50px 50px; }
   main.single h2, main.single h3, main.single h4, main.single h5, main.single h6 {
