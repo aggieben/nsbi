@@ -1,3 +1,20 @@
+{{ define "styles" }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/tomorrow.min.css"/>
+{{ end }}
+
+{{ define "scripts" }}
+    <script defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            hljs.initHighlighting();
+            document.querySelectorAll('pre code').forEach(function(el) {
+                el.classList.add('box');
+            })
+        });
+    </script>
+{{ end }}
+
 {{ define "header" }}
     {{ partial "header-visible" . }}
 {{ end }}
@@ -15,6 +32,9 @@
                         <span>Ben Collins</span>
                     </div>
                 </div>
+                <div>
+                    {{ dateFormat "January 2, 2006" .Date }}
+                </div>
             </header>
             <div class="separator columns">
                 <div class="column"><hr/></div>
@@ -22,7 +42,7 @@
                 <div class="column"><hr/></div>
             </div>
             <div class="content-wrap">
-            {{ .Content }}
+                {{ .Content }}
             </div>
         </article>
     </main>

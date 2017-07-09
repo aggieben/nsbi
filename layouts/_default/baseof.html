@@ -3,10 +3,12 @@
     <head>
         {{ partial "meta" . }}
         {{ partial "styles" . }}
+        {{ block "styles" . }}
+        {{ end }}
         {{ partial "global-scripts" . }}
         {{ block "scripts" . }}
         {{ end }}
-        <title>{{ default .Site.Title .Title }}</title> 
+        <title>{{ default .Site.Title .Title | title }}</title> 
     </head>
     <body class="section is-paddingless">
         {{ block "header" . }}
