@@ -4470,6 +4470,7 @@ main.error {
       margin-top: 25px; }
 
 .footer {
+  margin-top: 50px;
   border-top: 1px solid #eee; }
   .footer .container {
     text-align: center; }
