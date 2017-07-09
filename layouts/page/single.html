@@ -1,0 +1,13 @@
+{{ define "header" }}
+    {{ partial "header-visible" . }}
+{{ end }}
+
+{{ define "main" }}
+    <main class="single">
+        <article>
+            <div class="content-wrap">
+                {{ .Content }}
+            </div>
+        </article>
+    </main>
+{{ end }}

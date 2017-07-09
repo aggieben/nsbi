@@ -32,6 +32,10 @@ h3 {
     font-size: $size-3;
 }
 
+ul {
+    list-style: circle inside;
+}
+
 .container {
     @include tablet {
         max-width: $content-width-tablet;
@@ -99,10 +103,6 @@ h3 {
     border-bottom: 1px solid #eee;
     width: 100%;
 
-    .nav {
-        //height: 5rem;
-    }
-
     .nav-item {
         font-variant: small-caps;
         margin: 0px 20px;
@@ -144,6 +144,7 @@ h3 {
 
 main.single {
     margin-top: 100px;
+    margin-bottom: 100px;
     
     @include tablet {
         width: $content-width-tablet;
@@ -202,6 +203,22 @@ main.single {
 
     code.box {
         margin: 25px auto;
+    }
+}
+
+main.list {
+    margin-top: 100px;
+}
+
+main.error {
+    margin: 100px auto;
+    text-align: center;
+    
+    .card {
+        margin: 0 auto;
+        display: inline-block;
+        text-align: center;
+        padding: 25px;
     }
 }
 

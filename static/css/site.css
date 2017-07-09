@@ -4315,6 +4315,9 @@ h2 {
 h3 {
   font-size: 2rem; }
 
+ul {
+  list-style: circle inside; }
+
 @media screen and (min-width: 769px), print {
   .container {
     max-width: 960px; } }
@@ -4393,7 +4396,8 @@ h3 {
         transition: 0.2s ease-in-out; } }
 
 main.single {
-  margin-top: 100px; }
+  margin-top: 100px;
+  margin-bottom: 100px; }
   @media screen and (min-width: 769px), print {
     main.single {
       width: 960px; } }
@@ -4431,6 +4435,18 @@ main.single {
     margin-top: 20px; }
   main.single code.box {
     margin: 25px auto; }
+
+main.list {
+  margin-top: 100px; }
+
+main.error {
+  margin: 100px auto;
+  text-align: center; }
+  main.error .card {
+    margin: 0 auto;
+    display: inline-block;
+    text-align: center;
+    padding: 25px; }
 
 .featured {
   margin-top: 75px; }

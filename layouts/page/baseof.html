@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        {{ partial "meta" . }}
+        {{ partial "styles" . }}
+        {{ block "styles" . }}
+        {{ end }}
+        {{ partial "global-scripts" . }}
+        {{ block "scripts" . }}
+        {{ end }}
+        <title>{{ default .Site.Title .Title | title }}</title> 
+    </head>
+    <body class="section is-paddingless">
+        {{ block "header" . }}
+        {{ end }}
+        <div class="container">
+            {{ block "main" . }}
+            {{ end }}
+        </div>
+        {{ partial "footer" . }}
+    </body>
+</html>

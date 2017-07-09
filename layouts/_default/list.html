@@ -1,5 +1,11 @@
+{{ define "header" }}
+    {{ partial "header-visible" . }}
+{{ end }}
+
 {{ define "main" }}
+    <main class="list">
     {{ range .Data.Pages }}
-        {{ .Render "content-list" }}
+        {{ partial "list-block" . }}
     {{ end }}
+    </main>
 {{ end }}

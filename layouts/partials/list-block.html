@@ -1,0 +1,11 @@
+<article>
+    <header>
+        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="post-meta">
+            <time datetime="{{ .Date.Format "January 2, 2006" }}">{{ .Date.Format "January 2, 2006" }}</time>
+        </div>
+    </header>
+    <summary>
+        <p>{{ .Params.description | default (.Summary | markdownify | truncate 250 "..." ) }}</p>
+    </summary>
+</article>

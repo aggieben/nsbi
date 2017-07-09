@@ -1,0 +1,20 @@
+{{ define "header" }}
+    {{ partial "header-visible" . }}
+{{ end }}
+
+{{ define "main" }}
+<main class="error">
+    <div class="card">
+        <div class="card-image">
+            <img src="/img/confused-travolta.gif"/>
+        </div>
+        <div class="cart-content">
+            <h3>Uh....</h3>
+            <p>
+                It's right over there.  See it?  Behind you.  
+            </p>
+            <p><span class="tag is-warning">404 Not Found</span></p>
+        </div>
+    </div>
+</main>
+{{ end }}
