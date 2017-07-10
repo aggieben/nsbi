@@ -24,7 +24,7 @@
             <div class="featured columns">
                 {{ if eq 0 (mod $index 2) }}
                 <div class="column">
-                    <img src="https://nosidebar.com/images/site/chasing-slow@2x.jpg" />
+                    <img src={{ .Params.featureimg }} />
                 </div>
                 <div class="column is-two-thirds summary right">
                     {{ partial "featured-block.html" . }}
@@ -34,7 +34,7 @@
                     {{ partial "featured-block.html" . }}
                 </div>
                 <div class="column">
-                    <img src="https://nosidebar.com/images/site/chasing-slow@2x.jpg" />
+                    <img src={{ .Params.featureimg }} />
                 </div>
                 {{ end }}
             </div>
