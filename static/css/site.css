@@ -4307,13 +4307,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Cinzel", serif; }
 
 h1 {
-  font-size: 3rem; }
-
-h2 {
   font-size: 2.5rem; }
 
-h3 {
+h2 {
   font-size: 2rem; }
+
+h3 {
+  font-size: 1.5rem; }
+
+h4 {
+  font-size: 1.25rem; }
+
+h5 {
+  font-size: 1rem; }
+
+h6 {
+  font-size: 0.75rem; }
 
 ul {
   list-style: circle inside; }
@@ -4438,6 +4447,8 @@ main.single {
 
 main.list {
   margin-top: 100px; }
+  main.list article {
+    margin-bottom: 50px; }
 
 main.error {
   margin: 100px auto;
@@ -4456,9 +4467,10 @@ main.error {
       .featured article.hidden {
         opacity: 0;
         visibility: hidden; } }
-  .featured .summary {
+  .featured .column {
     display: flex;
-    align-items: center;
+    align-items: center; }
+  .featured .summary {
     padding: 15%; }
     .featured .summary.left {
       text-align: right; }

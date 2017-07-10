@@ -23,7 +23,7 @@
         {{ range $index, $element := where .Data.Pages ".Params.featured" true }}
             <div class="featured columns">
                 {{ if eq 0 (mod $index 2) }}
-                <div class="column">
+                <div class="column img">
                     <img src={{ .Params.featureimg }} />
                 </div>
                 <div class="column is-two-thirds summary right">
@@ -33,7 +33,7 @@
                 <div class="column is-two-thirds summary left">
                     {{ partial "featured-block.html" . }}
                 </div>
-                <div class="column">
+                <div class="column img">
                     <img src={{ .Params.featureimg }} />
                 </div>
                 {{ end }}
