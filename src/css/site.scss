@@ -3,7 +3,8 @@
 // customizations via bulma variables here here
 $family-sans-serif: 'Raleway', sans-serif;
 $family-primary: $family-sans-serif;
-$primary: $black-ter;
+// $primary: $black-ter;
+$primary: $blue;
 $background: $white;
 
 @import "../../node_modules/bulma/bulma";
@@ -42,6 +43,17 @@ h5 {
 
 h6 {
     font-size: $size-7;
+}
+
+p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    margin-left: 30px;
+    border-left: 5px solid #eee;
+    padding: 5px 10px;
 }
 
 ul {
