@@ -6,7 +6,9 @@
         {{ block "styles" . }}
         {{ end }}
         {{ partial "global-scripts" . }}
+        {{ template "_internal/google_analytics_async.html" . }}
         {{ block "scripts" . }}
+        
         {{ end }}
         <title>{{ default .Site.Title .Title | title }}</title> 
     </head>
